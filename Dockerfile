@@ -8,7 +8,7 @@ RUN chmod +x mvmw
 RUN ./mvnw package -DskipTest
 RUN mv -f target/*.jar app.jar
 
-FROM eclipse-temurin:21.jre
+FROM eclipse-temurin:21-jdk-nanoserverjre
 
 ARG PORT
 ENV PORT=${PORT}
